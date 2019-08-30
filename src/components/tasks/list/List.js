@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Row   from 'react-bootstrap/Row'
 import Card  from 'react-bootstrap/Card';
+import Col  from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,7 +17,7 @@ export default class List extends Component {
                             <Card.Body>
                                 <Table responsive>
                                     <tbody>
-                                        { this.props.tasks.map((tast, index) => {
+                                        { this.props.tasks.map((task, index) => {
                                             return (
                                                 <tr key={ task.id }>
                                                     <td className="col-md-10">
@@ -33,7 +34,7 @@ export default class List extends Component {
                                                     </td>
                                                     <td>
                                                         <a className="delete" href="#">
-                                                            <FontAwesomeFonts icon="trash-alt" />
+                                                            <FontAwesomeIcon icon="trash-alt" />
                                                         </a>
                                                     </td>
                                                 </tr>
