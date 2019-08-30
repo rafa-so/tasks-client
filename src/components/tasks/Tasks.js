@@ -39,11 +39,11 @@ export default class Tasks extends Component {
                 <Row>
                     <Col xs={ {span: 8, offset: 2} } className="tasks_list">
                         <p className="title">To-Do</p>
-                        <List tasks={ this.state.tasks.filter((task) => task.done !== true) } />
+                        <List loadTasks={this.loadTasks} tasks={ this.state.tasks.filter((task) => task.done !== true) } />
                     </Col>
                     <Col xs={ {span: 8, offset: 2} } className="tasks_list">
                         <p className="title">Done</p>
-                        <List tasks={ this.state.tasks.filter((task) => task.done === true) } />
+                        <List loadTasks={this.loadTasks} tasks={ this.state.tasks.filter((task) => task.done === true) } />
                     </Col>
                 </Row>
             );
